@@ -1,0 +1,38 @@
+{
+  "name": "UnSend recall FB Messages",
+  "description": "Xem lại tin nhắn đã gỡ trên fb",
+  "version": "0.0.4",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Reveal Deleted FB Message",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "24": "icons/icon24.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "externally_connectable": {
+    "matches": ["*://*.facebook.com/*"]
+  },
+  "permissions": [],
+  "host_permissions": ["*://*.facebook.com/*"],
+  "content_scripts": [
+    {
+      "js": ["./content.js"],
+      "matches": ["*://*.facebook.com/*"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "inject_websocket.js",
+        "icons/icon16.png",
+        "icons/icon32.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

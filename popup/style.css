@@ -1,0 +1,26 @@
+body {
+    min-height: 200px;
+    width: 400px;
+    background-color: #fff;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+p.highlight {
+    font-weight: bold;
+    background-color: rgb(231, 220, 199);
+    color: rgb(253, 94, 2);
+}
+
+a {
+    text-decoration: none;
+}
+
+.author {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    font-weight: bold;
+}
